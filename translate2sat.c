@@ -62,6 +62,11 @@
 void outputDIMACS();
 satinstance outputNSAT(int,int,int);
 
+seq seqs[10000];
+CEstruct **CEs;
+compactCEstruct **cCEs;
+int maxactvars;
+actvar *actvars;
 
 int nOfAux;
 int nOfClauses;

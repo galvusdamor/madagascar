@@ -19,7 +19,7 @@ typedef struct _thread {
 
 } thread;
 
-thread *threads;
+extern thread *threads;
 
 #define SVAR(v) (v)
 #define ACTVAR(a) ((a)+(sati->nOfSVars))
@@ -224,7 +224,7 @@ void setpheuristic(satinstance,int);
 int solve(satinstance);
 int solve0(satinstance,int,int);
 
-int noT2clauses;
+extern int noT2clauses;
 
 void addtimedvarcost(satinstance,int,int);
 
@@ -247,10 +247,10 @@ int propagate(satinstance);
 
 void init_clausesets(int);
 
-double allocatedbyCL;
+extern double allocatedbyCL;
 float memoryused();
 
-int flagShortCutHorizon;
+extern int flagShortCutHorizon;
 
 void shortcuts(satinstance sati);
 
@@ -258,8 +258,8 @@ typedef struct _shortcutclause {
   int l1,l2,tdiff;
 } shortcutclause;
 
-shortcutclause *shortcutclauses;
-int nofshortcutclauses;
-int maxshortcutclauses;
+extern shortcutclause *shortcutclauses;
+extern int nofshortcutclauses;
+extern int maxshortcutclauses;
 
 void nextround(satinstance sati);

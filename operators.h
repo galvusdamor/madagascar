@@ -80,9 +80,9 @@ typedef struct _action {
   int cost;
 } action;
 
-int nOfActions;
-int maxActions;
-action *actions;
+extern int nOfActions;
+extern int maxActions;
+extern action *actions;
 
 int disjunctivep(fma *);
 void initactions();
@@ -104,36 +104,36 @@ syntacticclass actionclass(int);
 
 syntacticclass goalclass();
 
-int *initialstate;
-fma *goal;
-int goalisdisjunctive;
+extern int *initialstate;
+extern fma *goal;
+extern int goalisdisjunctive;
 
 void simplifyoperators();
 void simplifyoperatorsstatic();
 
-ordintset *effectoccP; /* operators in which var is a positive effect */
-ordintset *effectoccN; /* operators in which var is a negative effect */
-ordintset *forcedeffectoccP; /* operators in which var is a positive effect */
-ordintset *forcedeffectoccN; /* operators in which var is a negative effect */
+extern ordintset *effectoccP; /* operators in which var is a positive effect */
+extern ordintset *effectoccN; /* operators in which var is a negative effect */
+extern ordintset *forcedeffectoccP; /* operators in which var is a positive effect */
+extern ordintset *forcedeffectoccN; /* operators in which var is a negative effect */
 
 
-ordintset *preconoccN; /* operators in which var is negative in precondition */
-ordintset *preconoccP; /* operators in which var is positive in precondition */
+extern ordintset *preconoccN; /* operators in which var is negative in precondition */
+extern ordintset *preconoccP; /* operators in which var is positive in precondition */
 
-ordintset *condocc; /* operators in which var occurs in a condition for effect */
+extern ordintset *condocc; /* operators in which var occurs in a condition for effect */
 
-ordintset *forcedeffectsP; /* variables the operator always makes true */
-ordintset *forcedeffectsN; /* variables the operator always makes false */
+extern ordintset *forcedeffectsP; /* variables the operator always makes true */
+extern ordintset *forcedeffectsN; /* variables the operator always makes false */
 
-ordintset *preconP; /* variable that must be true for operator */
-ordintset *preconN; /* variable that must be false for operator */
+extern ordintset *preconP; /* variable that must be true for operator */
+extern ordintset *preconN; /* variable that must be false for operator */
 
 /* Same as preconP and preconN, but including lits inferred with invariants. */
-ordintset *necessarypreconP; /* variable that must be true for operator */
-ordintset *necessarypreconN; /* variable that must be false for operator */
+extern ordintset *necessarypreconP; /* variable that must be true for operator */
+extern ordintset *necessarypreconN; /* variable that must be false for operator */
 
-ordintset *necessarypreconofP; /* operators in which atom is a nec precon */
-ordintset *necessarypreconofN; /* operators in which atom is a nec precon */
+extern ordintset *necessarypreconofP; /* operators in which atom is a nec precon */
+extern ordintset *necessarypreconofN; /* operators in which atom is a nec precon */
 
 int canmaketrue(int,int);
 int isaffectedby(int,int);
@@ -152,16 +152,16 @@ void eliminatestaticvariables();
 
 void mergecontras();
 
-int **AeffectoccP; /* operators in which var is a positive effect */
-int **AeffectoccN; /* operators in which var is a negative effect */
-int **ApreconP; /* variable that must be true for operator */
-int **ApreconN; /* variable that must be false for operator */
-int **AforcedeffectsP; /* variables the operator always makes true */
-int **AforcedeffectsN; /* variables the operator always makes false */
-int **AnecessarypreconP; /* variable that must be true for operator */
-int **AnecessarypreconN; /* variable that must be false for operator */
-int **ApreconoccN; /* operators in which var is negative in precondition */
-int **ApreconoccP; /* operators in which var is positive in precondition */
-int **Acondocc; /* operators in which var occurs in a condition for effect */
+extern int **AeffectoccP; /* operators in which var is a positive effect */
+extern int **AeffectoccN; /* operators in which var is a negative effect */
+extern int **ApreconP; /* variable that must be true for operator */
+extern int **ApreconN; /* variable that must be false for operator */
+extern int **AforcedeffectsP; /* variables the operator always makes true */
+extern int **AforcedeffectsN; /* variables the operator always makes false */
+extern int **AnecessarypreconP; /* variable that must be true for operator */
+extern int **AnecessarypreconN; /* variable that must be false for operator */
+extern int **ApreconoccN; /* operators in which var is negative in precondition */
+extern int **ApreconoccP; /* operators in which var is positive in precondition */
+extern int **Acondocc; /* operators in which var occurs in a condition for effect */
 
 void constructoperatorarrays();

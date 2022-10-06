@@ -13,12 +13,12 @@ void setLBD(int *,int);
 
 void free_clauses(int);
 
-int GCaggressiveness;
+extern int GCaggressiveness;
 double collectgarbage();
 
-double allocatedbyCDB;
+extern double allocatedbyCDB;
 
-int clausecount;
+extern int clausecount;
 
 void check_malloc_success(void *,int);
 

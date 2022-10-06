@@ -17,6 +17,13 @@
 #include "operators.h"
 #include "translate2sat.h"
 
+
+int GCaggressiveness;
+
+double allocatedbyCDB;
+
+int clausecount;
+
 #define noDEBUG
 #define noASSERTS
 #define noALIGNMENT /* There is a problem: the padding is not handled by GC! */

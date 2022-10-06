@@ -12,6 +12,14 @@
 #include <stdlib.h>
 #include <assert.h>
 
+
+
+stentry symboltable[MAXBUCKETS];
+
+stentry **index2stentry;
+
+int nOfAtoms;
+
 #define noASSERTS
 
 int maxSymbols;

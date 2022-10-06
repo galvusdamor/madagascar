@@ -12,9 +12,9 @@ typedef struct _stbucket {
 
 #define MAXBUCKETS 0x20000
 
-stentry symboltable[MAXBUCKETS];
+extern stentry symboltable[MAXBUCKETS];
 
-stentry **index2stentry;
+extern stentry **index2stentry;
 
 void initsymboltable();
 int symbolindex(char *);
@@ -26,7 +26,7 @@ void setnonstatic(int);
 
 /* Symboltable for p(o1,...,on) atoms. */
 
-int nOfAtoms;
+extern int nOfAtoms;
 
 void initatomtable();
 

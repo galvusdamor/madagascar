@@ -8,7 +8,7 @@ typedef struct _seq {
   int effort;
 } seq;
 
-seq seqs[10000];
+extern seq seqs[10000];
 
 void encoding();
 
@@ -19,7 +19,7 @@ typedef struct _CEstruct {
   struct _CEstruct *next;
 } CEstruct;
 
-CEstruct **CEs;
+extern CEstruct **CEs;
 
 typedef struct _compactCEstruct {
   int var;
@@ -27,14 +27,14 @@ typedef struct _compactCEstruct {
   char disjunctive;
 } compactCEstruct;
 
-compactCEstruct **cCEs;
+extern compactCEstruct **cCEs;
 
 typedef struct _actvar {
   int *effectlits;
   int *conditionlits;
 } actvar;
 
-int maxactvars;
-actvar *actvars;
+extern int maxactvars;
+extern actvar *actvars;
 
 int actaffects(int,int);

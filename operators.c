@@ -13,6 +13,55 @@
 #include "tables.h"
 #include "invariants.h"
 
+
+
+int nOfActions;
+int maxActions;
+action *actions;
+
+int *initialstate;
+fma *goal;
+int goalisdisjunctive;
+
+ordintset *effectoccP; /* operators in which var is a positive effect */
+ordintset *effectoccN; /* operators in which var is a negative effect */
+ordintset *forcedeffectoccP; /* operators in which var is a positive effect */
+ordintset *forcedeffectoccN; /* operators in which var is a negative effect */
+
+ordintset *preconoccN; /* operators in which var is negative in precondition */
+ordintset *preconoccP; /* operators in which var is positive in precondition */
+
+ordintset *condocc; /* operators in which var occurs in a condition for effect */
+
+ordintset *forcedeffectsP; /* variables the operator always makes true */
+ordintset *forcedeffectsN; /* variables the operator always makes false */
+
+ordintset *preconP; /* variable that must be true for operator */
+ordintset *preconN; /* variable that must be false for operator */
+
+/* Same as preconP and preconN, but including lits inferred with invariants. */
+ordintset *necessarypreconP; /* variable that must be true for operator */
+ordintset *necessarypreconN; /* variable that must be false for operator */
+
+ordintset *necessarypreconofP; /* operators in which atom is a nec precon */
+ordintset *necessarypreconofN; /* operators in which atom is a nec precon */
+
+int **AeffectoccP; /* operators in which var is a positive effect */
+int **AeffectoccN; /* operators in which var is a negative effect */
+int **ApreconP; /* variable that must be true for operator */
+int **ApreconN; /* variable that must be false for operator */
+int **AforcedeffectsP; /* variables the operator always makes true */
+int **AforcedeffectsN; /* variables the operator always makes false */
+int **AnecessarypreconP; /* variable that must be true for operator */
+int **AnecessarypreconN; /* variable that must be false for operator */
+int **ApreconoccN; /* operators in which var is negative in precondition */
+int **ApreconoccP; /* operators in which var is positive in precondition */
+int **Acondocc; /* operators in which var occurs in a condition for effect */
+
+
+
+
+
 #define noASSERTS
 #define noDEBUG
 

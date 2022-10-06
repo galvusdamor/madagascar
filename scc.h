@@ -9,4 +9,4 @@ typedef struct _scc {
 
 int scc(int);
 
-sccs SCCS;
+extern sccs SCCS;

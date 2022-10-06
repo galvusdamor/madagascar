@@ -61,7 +61,7 @@ Sfma *SfmaEQ(int,int);
 Sfma *Sfmaforall(typedvarlist *,Sfma *);
 Sfma *Sfmaforsome(typedvarlist *,Sfma *);
 
-Sfma *Sgoal;
+extern Sfma *Sgoal;
 
 /* Accessors */
 
@@ -117,11 +117,11 @@ char *problemname();
 
 void storeinit(atomlist *);
 void storegoal(Sfma *);
-atom *Sinit;
+extern atom *Sinit;
 
 /* Type variables */
 
-int UNIVTYPE;
+extern int UNIVTYPE;
 typedvarlist *withtype(int,intlist *);
 typedvarlist *TVappend(typedvarlist *,typedvarlist *);
 
@@ -136,9 +136,9 @@ typedef struct _Saction {
   Seff *effect;
 } Saction;
 
-int maxSActions;
-Saction *Sactions;
-int nOfSActions;
+extern int maxSActions;
+extern Saction *Sactions;
+extern int nOfSActions;
 void checkSactionsSize();
 
 atom newatom(int,intlist *);
@@ -160,8 +160,8 @@ void storeobjects(typedvarlist *);
 
 void showatom(atom);
 
-int linenumber;
-char *errorstring;
+extern int linenumber;
+extern char *errorstring;
 
 void readfile();
 

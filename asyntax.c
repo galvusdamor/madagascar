@@ -13,6 +13,18 @@
 #include "operators.h"
 #include "main.h"
 
+
+Sfma *Sgoal;
+atom *Sinit;
+int UNIVTYPE;
+int maxSActions;
+Saction *Sactions;
+int nOfSActions;
+int linenumber;
+char *errorstring;
+
+
+
 #define noDEBUG 1
 
 #include "parser.tab.h"
